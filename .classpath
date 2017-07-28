@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="C:/Users/clark.fourie/Downloads/javax.mail-1.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/clark.fourie/Downloads/jaf-1.1.1/activation.jar"/>
 	<classpathentry kind="lib" path="C:/Users/clark.fourie/Downloads/jsoup-1.10.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/clark.fourie/Downloads/java-json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
