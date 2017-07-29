@@ -17,12 +17,12 @@ import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 import javax.mail.internet.MimeMultipart;
-
 import org.jsoup.Jsoup;
 
 public class DemoCheckEmail {
 
 	public static void main(String[] args) {
+		System.out.println("DemoCheckMail run as main");
 		// Set mail properties and configure accordingly
 		String hostval = "pop.gmail.com";
 		String mailStrProt = "pop3";
@@ -39,7 +39,7 @@ public class DemoCheckEmail {
 			String extention, String charset) {
 		File fin = null;
 		try {
-			System.out.println("start");
+			System.out.println("Check mail start");
 			// Set property values
 			Properties propvals = new Properties();
 			propvals.put("mail.pop3.host", hostval);
@@ -95,20 +95,15 @@ public class DemoCheckEmail {
 							}
 						}
 
-						// Write email content to file
-//						writer.append(String.valueOf(i + 1) + "{");
-//						writer.append(System.lineSeparator());
 						writer.append(result);
-//						writer.append(System.lineSeparator());
-//						writer.append("}");
-//						writer.append(System.lineSeparator());
+
 					}
 					writer.close();
 				}
 				// Close all the objects
 				emailFolderObj.close(false);
 				storeObj.close();
-				System.out.println("END");
+				System.out.println("Check mail end");
 
 				// Remove unwanted text
 				File tmp = File.createTempFile("emailStore_" + date, extention, emailStore.getParentFile());
@@ -152,7 +147,7 @@ public class DemoCheckEmail {
 		} catch (Exception exp) {
 			exp.printStackTrace();
 		}
-		
+
 		return fin;
 	}
 }
